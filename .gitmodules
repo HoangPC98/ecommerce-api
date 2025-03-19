@@ -1,3 +1,9 @@
 [submodule "ecom-client-api"]
 	path = ecom-client-api
 	url = https://github.com/HoangPC98/ecom-client-api.git
+[submodule "ecom-protos-grpc"]
+	path = ecom-protos-grpc
+	url = git@github.com:HoangPC98/ecom-protos-grpc.git
+[submodule "ecom-messaging"]
+	path = ecom-messaging
+	url = git@github.com:HoangPC98/ecom-messaging.git
