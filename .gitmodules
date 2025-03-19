@@ -1,0 +1,3 @@
+[submodule "ecom-client-api"]
+	path = ecom-client-api
+	url = https://github.com/HoangPC98/ecom-client-api.git
