@@ -1,0 +1,21 @@
+
+services:
+  postgres_client_api:
+    image: postgres
+    volumes:
+      - postgres:/data/postgresql/db
+    container_name: postgres_client_api
+    restart: unless-stopped
+    environment:
+    - POSTGRES_HOST=localhost
+    - POSTGRES_PORT=5432
+    - POSTGRES_DB=client_api
+    - POSTGRES_USER=hoangpc
+    - POSTGRES_PASSWORD=hoangpc
+    - DATABASE_LOGGING=true
+    ports:
+      - 5432:5432
+   
+volumes:
+  postgres:
+    external: true

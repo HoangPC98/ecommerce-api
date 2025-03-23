@@ -1,0 +1,41 @@
+
+services:
+  redis_common:
+    image: redis:latest
+    container_name: redis_common
+    restart: always
+    command: redis-server --port 6380
+    ports:
+      - "6380:6380"
+    expose:
+      - "6380"
+    volumes:
+      - redis:/data
+    environment:
+      - REDIS_PORT=6381
+      - REDIS_DATABASES=2
+    networks:
+      - ecom_common
+
+  rabbitmq_common:
+    image: rabbitmq:3-management-alpine
+    container_name: rabbitmq_common
+    hostname: rabbitmq
+    volumes:
+      - /var/lib/rabbitmq
+    ports:
+      - 5672:5672
+      - 15672:15672
+    environment:
+      RABBITMQ_DEFAULT_USER: hoangpc
+      RABBITMQ_DEFAULT_PASS: hoangpc
+    networks:
+      - ecom_common
+
+volumes:
+  redis:
+    driver: local
+
+networks:
+  ecom_common:
+    external: true
