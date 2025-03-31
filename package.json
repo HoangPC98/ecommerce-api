@@ -4,7 +4,8 @@
   "description": "[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+     "gen:proto": "pbjs -t static-module -w commonjs -o dist/proto.js src/*.proto && pbts -o dist/proto.d.ts dist/proto.js"
   },
   "repository": {
     "type": "git",
@@ -17,10 +18,12 @@
   },
   "homepage": "https://github.com/HoangPC98/ecommerce-api#readme",
   "devDependencies": {
-    "nestjs-proto-gen-ts": "^1.0.21"
+    "nestjs-proto-gen-ts": "^1.0.21",
+    "ts-protoc-gen": "^0.15.0"
   },
   "dependencies": {
     "@grpc/grpc-js": "^1.13.0",
+    "class-transformer": "^0.5.1",
     "rxjs": "^7.8.2"
   }
 }
