@@ -7,3 +7,9 @@
 [submodule "ecom-messaging"]
 	path = ecom-messaging
 	url = git@github.com:HoangPC98/ecom-messaging.git
+[submodule "ecom-gateway-api"]
+	path = ecom-gateway-api
+	url = git@github.com:HoangPC98/ecom-gateway-api.git
+[submodule "ecom-scheduler"]
+	path = ecom-scheduler
+	url = git@github.com:HoangPC98/ecom-scheduler.git

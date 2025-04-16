@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# docker network create --driver bridge ecom_common
+docker network create --driver bridge ecom_common
 
 docker volume create postgres
 docker volume create redis
