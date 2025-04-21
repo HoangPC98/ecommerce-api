@@ -14,8 +14,9 @@ services:
     environment:
       - REDIS_PORT=6379
       # - REDIS_DATABASES=2
-    networks:
-      - ecom_common
+    # networks:
+      # - ecom_common
+    network_mode: host
 
   rabbitmq_common:
     image: rabbitmq:3-management-alpine
@@ -29,9 +30,9 @@ services:
     environment:
       RABBITMQ_DEFAULT_USER: hoangpc
       RABBITMQ_DEFAULT_PASS: hoangpc
-    networks:
-      - ecom_common
-    # network_mode: host
+    # networks:
+    #   - ecom_common
+    network_mode: host
 
 volumes:
   redis:
