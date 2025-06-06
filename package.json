@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-     "gen:proto": "pbjs -t static-module -w commonjs -o dist/proto.js src/*.proto && pbts -o dist/proto.d.ts dist/proto.js"
+    "gen:proto": "pbjs -t static-module -w commonjs -o dist/proto.js src/*.proto && pbts -o dist/proto.d.ts dist/proto.js"
   },
   "repository": {
     "type": "git",
